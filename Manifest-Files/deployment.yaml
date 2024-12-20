@@ -1,7 +1,8 @@
-apiVersion: apps/v1 
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fss-web-deployment 
+  name: fss-web-deployment
+  namespace: suresh-name
 spec:
   replicas: 3
   selector:
@@ -20,7 +21,7 @@ spec:
             memory: "128Mi"
             cpu: "200m"
           requests:
-            memory: "100Mi" 
+            memory: "100Mi"
             cpu: "100m"
         ports:
         - containerPort: 80
